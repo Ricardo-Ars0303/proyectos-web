@@ -1,0 +1,73 @@
+/* Animaciones de agregado/eliminado */
+.agregado {
+  background-color: #fff3cd !important; /* Dorado claro */
+  color: #856404 !important;
+  animation: fade 1s ease-in-out;
+}
+
+.eliminado {
+  background-color: #f8d7da !important; /* Rojo claro */
+  color: #721c24 !important;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* HERO con imagen de fondo */
+.hero {
+  position: relative;
+  height: 50vh;
+  background-image: url('../IMG/hero.jpg'); /* Imagen hero de autos de lujo */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+#productos {
+  scroll-margin-top: 70px;
+}
+
+/* Estilo general */
+body {
+  background-color: #000; /* Negro lujo */
+  color: #fff;
+}
+
+.card {
+  border: 2px solid #ffc107; /* Dorado */
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  font-weight: bold;
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
